@@ -1,0 +1,140 @@
+.ui-content.home{
+	background-image: url(https://images.unsplash.com/photo-1504889270807-ccd74713ad45?auto=format&fit=crop&w=634&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D); 
+	background-position: top;
+	color: aliceblue;
+	text-align: center;
+}
+
+/* Change html headers color */
+div.ui-header.ui-bar-b.ui-header-fixed.slidedown, 
+div.ui-footer.ui-bar-b.ui-footer-fixed.slideup{
+	background-color: #4B0082;
+	border-style: none;
+}
+
+h1,h2,h3,h4,h5 {
+    color:#0071bc;
+}
+h2.mc-text-danger,
+h3.mc-text-danger  {
+    color:red;
+}
+
+/* Change border radius of icon buttons */
+a.ui-btn.ui-shadow {
+    -webkit-border-radius: .3125em;
+    border-radius: .3125em;
+}
+
+
+/* Change color of jQuery Mobile page headers */
+.ui-btn-left.ui-btn.ui-icon-bars.ui-btn-icon-notext.ui-shadow.ui-corner-all{
+	background-color: #4B0082;
+    border-style: none;
+    font-size: 1.2em;
+}
+
+.ui-title {
+    color:#fff;
+}
+/* Center-aligned text */
+.mc-text-center {
+    text-align:center;
+}
+/* Top margin for some elements */
+.mc-top-margin-1-5 {
+    margin-top:1.5em;
+}
+
+/* Panel in home.html */
+div#overlayPanel{
+/*	height: 1000px;*/
+}
+
+ul{
+	list-style: none;
+	padding: 0;
+}
+
+ul li{
+	border-bottom: 1px grey solid;
+	padding: 15px 20px;
+}
+
+li a{
+	text-decoration: none;
+}
+
+#overlayPanel{
+	background-color: black;
+}
+
+#overlayPanel a{
+	color: white;
+}
+
+/* Weather Panel color + font */
+#big-font{
+	text-align: center;
+	color: white;
+	font-size: 1.3em;
+}
+
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper{
+	text-shadow: none;
+}
+
+/* fontawesome icon bigger and padding setting */
+ul .fa{
+	font-size: 1.2em;
+	padding-right: 10px;
+}
+
+/* Change style .panel and .flip */
+.container{
+	position: absolute;
+	left: 0px;
+	width: 100%;
+}
+
+.panel, .flip {
+	cursor: pointer;
+/*	padding: 5px;*/
+	font-family:sans-serif;
+	text-align: center;
+	color: white;
+	background-color: #191919;
+/*	border: solid 1px floralwhite;*/
+}
+
+.flip{
+	font-weight: 800;	
+	height: 100px;
+	line-height: 100px;
+}
+
+.panel {
+	display: none;
+	padding: 0px;
+	margin: -20px;
+	border-bottom-style: none;
+	color: bisque;
+}
+
+.panel ul{
+	border-style: none;	
+}
+
+.panel li{
+	border-style: none;
+}
+
+.fa.fa-chevron-down{
+	font-size: 0.7em;
+	float: left;
+}
+
+/* #output Place  */
+img{
+	width: 40%;
+}

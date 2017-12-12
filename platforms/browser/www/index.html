@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+	
+    <!-- fontawesome CDN -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	
+	<!-- jquery.css file  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.structure.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.theme.min.css" />
+	
+	<!-- jquery.js file  -->
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+	<style>
+		
+	</style>
+    <title>Convenience</title>
+</head>
+
+<body>
+    <!-- Go to Convenience Page -->
+	<div data-role="page" id="home">
+		<div data-role="header" data-theme="b" data-position="fixed" class="myPanel">
+			<a href="#overlayPanel" class="ui-btn ui-shadow ui-corner-all ui-icon-bars ui-btn-icon-notext">Bar Menu</a>			
+			<h1>Convenience</h1>			
+		</div><!-- header -->
+		<div role="main" class="ui-content home">			
+			<label for="slider-fill-mini">Parameters (from 500m - 5000m):</label>
+			<input type="range" id="parameter" name="slider-1" id="slider-1" value="500" min="500" max="5000" data-highlight="true">
+				<p style="font-size: 0.8em">Default: 500-meter-paramter from your current location</p>
+				<div class="container">
+					<div class="row">
+						<div class="flip"><i class="fa fa-chevron-down" aria-hidden="true"></i>Eating & Drinking</div>
+						<div class="panel" style="background-image: url(https://images.unsplash.com/photo-1505253149613-112d21d9f6a9?auto=format&fit=crop&w=634&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D); background-position: center">
+							<ul>
+								<li title="bar">Bar</li>
+								<li title="bakery">Bakery</li>				
+								<li title="cafe">Cafe</li>
+								<li title="meal-delivery">Food Delivery</li>
+								<li title="restaurant">Restaurant</li>							
+							</ul>
+						</div>					
+					</div>
+					<div class="row">
+						<div class="flip"><i class="fa fa-chevron-down" aria-hidden="true"></i>Shopping & Beauty</div>
+						<div class="panel" style="background-image: url(https://images.unsplash.com/photo-1507290439931-a861b5a38200?auto=format&fit=crop&w=1190&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D); background-position: center">
+							<ul>							
+								<li title="beauty_salon">Beauty & Salon</li>
+								<li title="convenience_store">Convinience Store</li>
+								<li title="clothing_store">Clothing Store</li>
+								<li title="jewelry_store">Jewelry Store</li>
+								<li title="hair_care">Hair Care</li>
+								<li title="shoe_store">Shoe Store</li>
+								<li title="shopping_mall">Shopping Mall</li>
+								<li title="store">Store</li>
+								<li title="spa">Spa</li>
+							</ul>
+						</div>
+					</div>
+					<div class="row">
+						<div class="flip"><i class="fa fa-chevron-down" aria-hidden="true"></i>Finance</div>
+						<div class="panel" style="background-image: url(https://images.unsplash.com/photo-1495996797143-9fc04e79e304?auto=format&fit=crop&w=1050&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D); background-position: center">
+							<ul>
+								<li title="atm">ATM</li>
+								<li title="bank">Bank</li>
+							</ul>
+						</div>
+					</div>
+					<div class="row">
+						<div class="flip"><i class="fa fa-chevron-down" aria-hidden="true"></i>Education</div>
+						<div class="panel" style="background-image: url(https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1052&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D); background-position: center">
+							<ul>
+								<li title="book_store">Book Store</li>
+								<li title="library">Library</li>
+								<li title="school">School</li>
+								<li title="university">University</li>
+							</ul>
+						</div>
+					</div>
+					<div class="row">
+						<div class="flip"><i class="fa fa-chevron-down" aria-hidden="true"></i>Health</div>
+						<div class="panel" style="background-image: url(https://images.unsplash.com/photo-1444312645910-ffa973656eba?auto=format&fit=crop&w=634&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D); background-position: center">
+							<ul>
+								<li title="dentist">Dentist</li>
+								<li title="doctor">Doctor</li>
+								<li title="hospital">Hospital</li>
+								<li title="pharmacy">Pharmacy</li>
+								<li title="physiotherapisy">Physiotherapist</li>
+							</ul>
+						</div>
+					</div>
+					<div class="row">
+						<div class="flip"><i class="fa fa-chevron-down" aria-hidden="true"></i>Entertainment</div>
+						<div class="panel" style="background-image: url(https://images.unsplash.com/photo-1458891216473-4f26bb4eb40e?auto=format&fit=crop&w=1050&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D); background-position: center">
+							<ul>
+								<li title="amusement_park">Amusement Park</li>
+								<li title="aquarium">Aquarium</li>
+								<li title="art_gallery">Art Gallery</li>
+								<li title="campground">Campground</li>
+								<li title="casino">Casino</li>
+								<li title="movie_theater">Movie Theater</li>
+								<li title="museum">Museum</li>
+								<li title="night_club">Night Club</li>
+								<li title="zoo">Zoo</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div><!-- /content -->
+	</div><!-- /page -->
+	
+	<div data-role="page" id="page2">
+		<div data-role="header" data-theme="b" data-position="fixed" class="myPanel">
+			<a href="#overlayPanel" class="ui-btn ui-shadow ui-corner-all ui-icon-bars ui-btn-icon-notext">Bar Menu</a>			
+			<h1>Convenience</h1>			
+		</div> 
+		<div role="main" class="ui-content">
+			<div id="outputPlace"></div>
+			
+		</div><!-- /content -->	
+	</div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();		
+		
+		$(document).on("pagebeforecreate", function() {			
+			//PANEL external added on multiple pages	
+			//Callback function mobile
+			setPanel();			
+		});
+		
+		var panel = null;
+		var dataAjax = null;
+		
+		//Fetch GeolocationAPI for PANEL in ALL PAGES
+		function getLocation(callback) {
+		  navigator.geolocation.getCurrentPosition (function (position){
+			var location = {
+				longitude: position.coords.longitude,
+				latitude: position.coords.latitude
+			};
+			callback(location);         
+		  })
+		}
+		
+		//Set panel
+		function setPanel(){	
+			var myWeatherAPI = "32ebcdcea6b796e77f167dbfa6c9d366";
+			
+			//Return values of geolocation to WeatherAPI as `lon` and `lat`
+			//Type of geolocation: asynchronous
+			//
+			getLocation(function(location){
+				var lon = location.longitude;
+				var lat = location.latitude;
+				
+				//Fetch WeatherAPI for PANEL
+				//
+				$.ajax({
+					"async": false,
+					"url": "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&APPID=" + myWeatherAPI,
+					"dataType": "json",
+					"success": function(data){
+						var tempCel = data.main.temp - 273.15;
+						var iconURL = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
+						var weatherIcon = "<img src='" + iconURL + "' alt='weatherIcon' >";
+						dataAjax = "<strong>" + data.name + "</strong><br />" + weatherIcon + "<br />" + tempCel + "°C";
+						
+						//Panel html implementation
+						//
+						panel = '<div data-role="panel" id="overlayPanel" data-display="overlay"><ul><li id="big-font">';		
+						panel += dataAjax + '</li>';
+						panel += '<li><a href="/#home"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>';
+						panel += '<li><a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"></i>Save</a></li>'
+						panel += '<li><a href="#" data-ajax="false"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a></li></ul></div>';
+						
+						//Panel add to mobile 
+						$.mobile.pageContainer.prepend(panel);
+						$("#overlayPanel").panel();
+					},
+					"error": function(data){
+						alert("Error occurred while fetching weather!");
+					}
+				});
+			})
+		};
+		
+		
+		//Flip Panel List Items
+		$(".flip").on("click", function(){
+			$(this).siblings().slideToggle("slow");
+	
+		});
+		//Fetch Nearby Places
+		//
+		//Click a specific place
+		$(".panel").find("li").click(function(){
+			var type = $(this).attr("title");
+			var radius = $("#parameter").val();
+			
+			var myPlaceAPI = "AIzaSyC_Vla68YvByReVbel7pg9bhMGck7iXftg";
+			
+			//Return values of geolocation to WeatherAPI as `lon` and `lat`
+			//
+			getLocation(function(location){				
+				var coords = location.latitude + "," + location.longitude;
+				console.log(coords);
+				
+				//Start Fetching Places NOW
+				$.ajax({
+					"async": false,
+					"url":  "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + coords + "&radius=" + radius + "&type=" + type + "&key=" + myPlaceAPI,
+					"dataType": "json",
+					"success": function(data){
+						var nearbyStr = "<h3>" + data.results.length + " " + type +  "(s) found in your area</h3>";
+						 
+                        for(var i = 0; i < data.results.length; i++){
+							var hasImg = data.results[i].hasOwnProperty("photos");
+							if(hasImg){
+								var imgURL = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=300&photoreference=" + data.results[i].photos[0].photo_reference + "&key=" + myPlaceAPI;
+								nearbyStr += "<img src = '" + imgURL + "'>";
+								console.log(hasImg + ": " + i);
+							} else{								
+								nearbyStr += "<img src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP1qQ-JkM6-UIz4SIA3a0lBak5rOa0_GfxuRdp1be5g2mmkDAseA'>";
+								console.log(hasImg + ": " + i);
+							}
+							
+                            nearbyStr += "<strong>" + data.results[i].name + "</strong><br>" + data.results[i].vicinity + "<br><br><br>";
+                        }
+						
+						$("#outputPlace").html(nearbyStr);
+						//Change Page
+						$.mobile.changePage('#page2');
+						
+					},
+					"error": function(data){
+						alert("Error occurred while fetching placeAPI");
+					}					
+				});
+			});
+		})
+    </script>
+	
+</body>
+
+</html>
