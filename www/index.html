@@ -128,6 +128,17 @@
 			
 		</div><!-- /content -->	
 	</div>
+	
+	<div data-role="page" id="save">
+		<div data-role="header" data-theme="b" data-position="fixed" class="myPanel">
+			<a href="#overlayPanel" class="ui-btn ui-shadow ui-corner-all ui-icon-bars ui-btn-icon-notext">Bar Menu</a>			
+			<h1>Convenience</h1>			
+		</div> 
+		<div role="main" class="ui-content">
+			<h3>Your Saves</h3>
+			<ul id="datalist"></ul>
+		</div><!-- /content -->	
+	</div>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
@@ -137,6 +148,7 @@
 			//PANEL external added on multiple pages	
 			//Callback function mobile
 			setPanel();			
+			
 		});
 		
 		var panel = null;
@@ -180,9 +192,8 @@
 						//
 						panel = '<div data-role="panel" id="overlayPanel" data-display="overlay"><ul><li id="big-font">';		
 						panel += dataAjax + '</li>';
-						panel += '<li><a href="/#home"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>';
-						panel += '<li><a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"></i>Save</a></li>'
-						panel += '<li><a href="#" data-ajax="false"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a></li></ul></div>';
+						panel += '<li><a href="/#home"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>';	
+						panel += '<li><a href="#save"><i class="fa fa-bookmark-o" aria-hidden="true"></i>Save</a></li></ul></div>';
 						
 						//Panel add to mobile 
 						$.mobile.pageContainer.prepend(panel);
@@ -225,17 +236,20 @@
 						var nearbyStr = "<h3>" + data.results.length + " " + type +  "(s) found in your area</h3>";
 						 
                         for(var i = 0; i < data.results.length; i++){
+							nearbyStr += "<div class='ui-grid-a'>";
+							nearbyStr += "<div class='ui-block-a'>"
 							var hasImg = data.results[i].hasOwnProperty("photos");
 							if(hasImg){
 								var imgURL = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=300&photoreference=" + data.results[i].photos[0].photo_reference + "&key=" + myPlaceAPI;
 								nearbyStr += "<img src = '" + imgURL + "'>";
-								console.log(hasImg + ": " + i);
 							} else{								
 								nearbyStr += "<img src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP1qQ-JkM6-UIz4SIA3a0lBak5rOa0_GfxuRdp1be5g2mmkDAseA'>";
-								console.log(hasImg + ": " + i);
 							}
-							
-                            nearbyStr += "<strong>" + data.results[i].name + "</strong><br>" + data.results[i].vicinity + "<br><br><br>";
+							nearbyStr += "</div>";
+							nearbyStr += "<div class='ui-block-b'>";
+                            nearbyStr += "<strong>" + data.results[i].name + "</strong><br>" + data.results[i].vicinity + "<br>Rating: " + data.results[i].rating;
+							nearbyStr += "</div><br /><i class='fa fa-bookmark-o save' aria-hidden='true'></i>";
+							nearbyStr += "</div>";
                         }
 						
 						$("#outputPlace").html(nearbyStr);
@@ -249,6 +263,59 @@
 				});
 			});
 		})
+		
+		//Save in LocalStorage
+			
+//		$(".fa.fa-bookmark-o.save").click(function(event){
+////			var name = $(".ui-block-b").find("strong").html();
+////			alert("You have saved " + name);
+////			$(this).addClass("already");
+////			saveLocalStorage(name);	
+//			alert("FUCK THIS SHIT");
+//		})
+		
+		//Local Storage
+		var storage = window.localStorage;
+		var count = 0;
+		
+		function saveLocalStorage(name){
+			//Get current date
+			//
+			var d = new Date();
+			var month = d.getMonth() + 1;
+			var day = d.getDate();
+			var year = d.getFullYear();
+			var fullDate = day + "/" + month + "/" + year;
+		
+			//Get 'saved' value from #outputPlace
+			//
+			
+			//Local Storage Obj
+			var dataObj = {
+				date: fullDate,
+				nameSaved: name
+			}
+			
+			storage.setItem(count, JSON.stringify(dataObj));
+			var testStr = "";
+			for(var i = count; i < storage.length; i++){
+				var savedItem = storage.getItem(storage.key(i));
+				var item = JSON.parse(savedItem);
+				
+				testStr += "<li>" + item.date + ": " + item.nameSaved + "<button class='delete'>Unsave</button></li>";
+			}
+			count++;
+			testStr += "</ul>";
+			$("#datalist").append(testStr);
+			
+			$(".delete").click(function(){
+				var itemIndex = $(this).parent().index;
+				$(this).parent().remove();
+				storage.removeItem(itemIndex);
+				$(".fa.fa-bookmark-o.save").removeClass("already");
+			});
+		}
+		
     </script>
 	
 </body>

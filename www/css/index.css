@@ -135,6 +135,32 @@ ul .fa{
 }
 
 /* #output Place  */
-img{
+.ui-grid-a{
+	margin-bottom: 30px;
+}
+
+.ui-block-a img{
+	width: 90%;
+	height: 100px;
+}
+
+.ui-block-a{
 	width: 40%;
+}
+
+.ui-block-b{
+	width: 60%;
+}
+
+/* SAVING BOOKMARK */
+.fa.fa-bookmark-o.save{
+	font-size: 1.5em;
+}
+.fa.fa-bookmark-o.save:hover{
+	cursor: pointer;
+	background-color: orange;
+}
+
+.fa.fa-bookmark-o.save.already{
+	background-color: orange;
 }
